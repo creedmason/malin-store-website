@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - MALIN</title>
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h1 class="navbar__logo">Malin</h1>
+    <nav class="navbar__nav">
+      <ul class="navbar__links">
+        <li><a href="home.html" class="navbar__link">Home</a></li>
+        <li><a href="collection.html" class="navbar__link">Collections</a></li>
+        <li><a href="about.html" class="navbar__link">About</a></li>
+        <li><a href="contact.html" class="navbar__link">Contact</a></li>
+        <li><a href="feedback.html" class="navbar__link">Feedback</a></li>
+      </ul>
+    </nav>
+    <div class="navbar__actions">
+      <a href="cart.html" class="navbar__icon">&#128722;</a>
+  </header>
+
+  <!-- SHOPPING CART -->
+  <main class="cart-section">
+    <div class="cart__header">
+      <h1 class="cart__title">Shopping Cart</h1>
+      <p class="cart__subtitle">Review your items before checkout</p>
+    </div>
+
+    <div class="cart__wrapper">
+      <!-- Cart items list -->
+      <div class="cart__items" id="cartItemsContainer">
+        <!-- Sample item 1 -->
+        <div class="cart-item">
+          <img src="images/black graphic hoodie.jpg" alt="Premium Black Hoodie" class="cart-item__img">
+          <div class="cart-item__details">
+            <h3 class="cart-item__name">Hoodie</h3>
+            <div class="cart-item__info">
+              <span><span class="cart-item__info-label">Size:</span> L</span>
+              <span><span class="cart-item__info-label">Color:</span> Black</span>
+            </div>
+            <p class="cart-item__price">P350</p>
+          </div>
+          <div class="cart-item__actions">
+            <div class="cart-item__subtotal">P350</div>
+            <div class="cart-item__controls">
+              <button class="cart-item__btn">−</button>
+              <span class="cart-item__qty">1</span>
+              <button class="cart-item__btn">+</button>
+            </div>
+            <button class="cart-item__remove">Remove</button>
+          </div>
+        </div>
+
+        <!-- Sample item 2 -->
+        <div class="cart-item">
+          <img src="images/graphic t-shirt.jpg" alt="Classic White T-Shirt" class="cart-item__img">
+          <div class="cart-item__details">
+            <h3 class="cart-item__name"> T-Shirt</h3>
+            <div class="cart-item__info">
+              <span><span class="cart-item__info-label">Size:</span> M</span>
+              <span><span class="cart-item__info-label">Color:</span> White</span>
+            </div>
+            <p class="cart-item__price">P 200</p>
+          </div>
+          <div class="cart-item__actions">
+            <div class="cart-item__subtotal">P 200</div>
+            <div class="cart-item__controls">
+              <button class="cart-item__btn">−</button>
+              <span class="cart-item__qty">2</span>
+              <button class="cart-item__btn">+</button>
+            </div>
+            <button class="cart-item__remove">Remove</button>
+          </div>
+        </div>
+
+        <!-- Sample item 3 -->
+        <div class="cart-item">
+          <img src="images/black white sweatpants.jpeg" alt="Streetwear Sweatpants" class="cart-item__img">
+          <div class="cart-item__details">
+            <h3 class="cart-item__name">Sweatpants</h3>
+            <div class="cart-item__info">
+              <span><span class="cart-item__info-label">Size:</span> L</span>
+              <span><span class="cart-item__info-label">Color:</span> Black White</span>
+            </div>
+            <p class="cart-item__price">P 300</p>
+          </div>
+          <div class="cart-item__actions">
+            <div class="cart-item__subtotal">P 300</div>
+            <div class="cart-item__controls">
+              <button class="cart-item__btn">−</button>
+              <span class="cart-item__qty">1</span>
+              <button class="cart-item__btn">+</button>
+            </div>
+            <button class="cart-item__remove">Remove</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart summary sidebar -->
+      <aside class="cart__summary">
+        <h2 class="summary__title">Order Summary</h2>
+
+        <div class="summary__row">
+          <span>Subtotal</span>
+          <span class="summary__value">P1,000</span>
+        </div>
+        <div class="summary__row summary__row--total">
+          <span>Total</span>
+          <span class="summary__value--red">P1,000.00</span>
+        </div>
+
+        <div class="summary__actions">
+          <button class="btn btn--red">Proceed to Checkout</button>
+          <button class="btn btn--outline">Continue Shopping</button>
+        </div>
+
+
+    <!-- Continue shopping section -->
+    <div class="cart__continue">
+      <p class="cart__continue-text">Free shipping on orders over P1,500</p>
+      <a href="collection.html" class="btn btn--red">Browse Collections</a>
+      <a href="home.html" class="btn btn--outline">Back to Home</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__grid">
+
+      <div class="footer__brand">
+        <h3 class="footer__logo">Malin</h3>
+        <p class="footer__desc">Comfort is our main priority for you</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Collections</h4>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">Hoodies</a></li>
+          <li><a href="#" class="footer__link">T-shirts</a></li>
+          <li><a href="#" class="footer__link">Pants</a></li>
+          <li><a href="#" class="footer__link">Shoes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Help</h4>
+        <ul class="footer__links">
+          <li><a href="contact.html" class="footer__link">Contact Us</a></li>
+          <li><a href="index.html" class="footer__link">Returns</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__newsletter">
+        <h4 class="footer__heading">Stay Updated</h4>
+        <p class="footer__desc">Drop alerts straight to your inbox.</p>
+        <div class="footer__form">
+          <input type="email" placeholder="Your email" class="footer__input">
+          <button class="btn btn--red">JOIN</button>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="footer__copy">&copy; 2026 Malin. All Rights Reserved.</p>
+  </footer>
+
+  </script>
+
+</body>
+</html>

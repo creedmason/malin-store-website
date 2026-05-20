@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Malin Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h1 class="navbar__logo">MALIN</h1>
+    <nav class="navbar__nav">
+      <ul class="navbar__links">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="#contact" class="navbar__link navbar__link--active">Contact</a></li>
+        <li><a href="collection.html" class="navbar__link">Collections</a></li>
+        <li><a href="about.html" class="navbar__link">About</a></li>
+        <li><a href="feedback.html" class="navbar__link">Feedback</a></li>
+      </ul>
+    </nav>
+    <div class="navbar__actions">
+      <a href="cart.html" class="navbar__icon">&#128722;</a>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <div class="contact__header">
+      <h2 class="section-title">GET IN TOUCH</h2>
+      <p class="contact__subtitle">Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.</p>
+    </div>
+
+    <div class="contact__container">
+      <!-- Contact Form -->
+      <form class="contact-form" id="contactForm">
+        <div class="contact-form__group">
+          <label class="contact-form__label">Full Name</label>
+          <input type="text" class="contact-form__input" placeholder="John Doe" required>
+        </div>
+
+        <div class="contact-form__group">
+          <label class="contact-form__label">Email Address</label>
+          <input type="email" class="contact-form__input" placeholder="your@email.com" required>
+        </div>
+
+        <div class="contact-form__group">
+          <label class="contact-form__label">Phone Number</label>
+          <input type="tel" class="contact-form__input" placeholder="+1 (555) 000-0000">
+        </div>
+
+        <div class="contact-form__group">
+          <label class="contact-form__label">Subject</label>
+          <select class="contact-form__select" required>
+            <option value="">Select a subject</option>
+            <option value="order">Order Inquiry</option>
+            <option value="product">Product Question</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="contact-form__group">
+          <label class="contact-form__label">Message</label>
+          <textarea class="contact-form__textarea" placeholder="Tell us how we can help..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--red contact-form__button">SEND MESSAGE</button>
+      </form>
+
+        <!-- Contact Details -->
+        <div class="contact-info__block">
+          <h3 class="contact-info__title">Contact Details</h3>
+          <div class="contact-info__item">
+            <span class="contact-info__icon">📞</span>
+            <div class="contact-info__text">
+              <a href="tel:+26700000000">+267 7X XXX XXX</a>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__icon">✉️</span>
+            <div class="contact-info__text">
+              <a href="mailto:hello@malinstore.com">hello@malinstore.com</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="contact-info__block">
+          <h3 class="contact-info__title">Follow Us</h3>
+          <p class="contact-info__text">Stay updated with new collections and exclusive drops.</p>
+          <div class="contact-info__social">
+            <a href="https://www.tiktok.com/@malin.stores" class="contact-info__social-link" title="TikTok">🎵</a>
+            <a href="https://www.facebook.com/profile.php?id=100064325911324" class="contact-info__social-link" title="Facebook">f</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__grid">
+
+      <div class="footer__brand">
+        <h3 class="footer__logo">Malin</h3>
+        <p class="footer__desc">Comfort is our main priority for you</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Collections</h4>
+        <ul class="footer__links">
+          <li><a href="collection.html" class="footer__link">Hoodies</a></li>
+          <li><a href="collection.html" class="footer__link">T-shirts</a></li>
+          <li><a href="collection.html" class="footer__link">Pants</a></li>
+          <li><a href="collection.html" class="footer__link">Shoes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Help</h4>
+        <ul class="footer__links">
+          <li><a href="contact.html" class="footer__link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__newsletter">
+        <h4 class="footer__heading">Stay Updated</h4>
+        <p class="footer__desc">Drop alerts straight to your inbox.</p>
+        <div class="footer__form">
+          <input type="email" placeholder="Your email" class="footer__input">
+          <button class="btn btn--red">JOIN</button>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="footer__copy">&copy; 2026 Malin. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - MALIN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h1 class="navbar__logo"> MALIN</h1>
+    <nav class="navbar__nav">
+      <ul class="navbar__links">
+        <li><a href="home.html" class="navbar__link">Home</a></li>
+        <li><a href="collection.html" class="navbar__link">Collections</a></li>
+        <li><a href="about.html" class="navbar__link">About</a></li>
+        <li><a href="contact.html" class="navbar__link">Contact</a></li>
+        <li><a href="feedback.html" class="navbar__link navbar__link--active">Feedback</a></li>
+      </ul>
+    </nav>
+    <div class="navbar__actions">
+      <a href="cart.html" class="navbar__icon">&#128722;</a>
+
+    </div>
+  </header>
+
+  <!-- FEEDBACK FORM SECTION -->
+  <section id="feedback" class="feedback-section">
+    <div class="feedback-hero">
+      <h2 class="feedback-hero__title">We Value Your Feedback</h2>
+      <p class="feedback-hero__desc">Tell us about your experience with Malin Store. Your opinions help us improve and serve you better.</p>
+    </div>
+
+    <form class="feedback-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">First Name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text"
+                 id="firstName"
+                 name="firstName"
+                 placeholder="Your first name"
+                 required
+                 minlength="2"
+                 maxlength="50"
+                 autocomplete="given-name" />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text"
+                 id="lastName"
+                 name="lastName"
+                 placeholder="Your last name"
+                 maxlength="50"
+                 autocomplete="family-name" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email"
+                 id="email"
+                 name="email"
+                 placeholder="you@example.com"
+                 autocomplete="email" />
+          <span class="form-hint">Optional — only if you'd like a reply</span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone / WhatsApp</label>
+          <input type="tel"
+                 id="phone"
+                 name="phone"
+                 placeholder="+267 7X XXX XXX"
+                 pattern="[+]?[0-9\s\-]{7,15}"
+                 autocomplete="tel" />
+        </div>
+      </div>
+
+      <!-- Feedback Type -->
+      <div class="form-group">
+        <label for="type">Feedback Type <span class="req" aria-hidden="true">*</span></label>
+        <select id="type" name="type" required>
+          <option value="">Select feedback type...</option>
+          <option value="product-quality">Product Quality</option>
+          <option value="customer-service">Customer Service</option>
+          <option value="website">Website Experience</option>
+          <option value="general">General Feedback</option>
+        </select>
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label for="message">Your Feedback <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" placeholder="Share your thoughts, suggestions, or concerns..." required></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group form-submit">
+        <button type="submit" class="btn btn--red">SUBMIT FEEDBACK</button>
+      </div>
+    </form>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__grid">
+
+      <div class="footer__brand">
+        <h3 class="footer__logo">MALIN</h3>
+        <p class="footer__desc">Comfort is our main priority for you</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Collections</h4>
+        <ul class="footer__links">
+          <li><a href="collection.html" class="footer__link">Hoodies</a></li>
+          <li><a href="collection.html" class="footer__link">T-shirts</a></li>
+          <li><a href="collection.html" class="footer__link">Pants</a></li>
+          <li><a href="collection.html" class="footer__link">Shoes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Help</h4>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__newsletter">
+        <h4 class="footer__heading">Stay Updated</h4>
+        <p class="footer__desc">Drop alerts straight to your inbox.</p>
+        <div class="footer__form">
+          <input type="email" placeholder="Your email" class="footer__input">
+          <button class="btn btn--red">JOIN</button>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="footer__copy">&copy; 2026 MAalin. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
