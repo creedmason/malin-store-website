@@ -10,24 +10,30 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <h1 class="navbar__logo"> MALIN</h1>
-    <nav class="navbar__nav">
-      <ul class="navbar__links">
-        <li><a href="home.html" class="navbar__link">Home</a></li>
-        <li><a href="collection.html" class="navbar__link">Collections</a></li>
-        <li><a href="about.html" class="navbar__link">About</a></li>
-        <li><a href="contact.html" class="navbar__link">Contact</a></li>
-        <li><a href="feedback.html" class="navbar__link navbar__link--active">Feedback</a></li>
-      </ul>
-    </nav>
-    <div class="navbar__actions">
-      <a href="cart.html" class="navbar__icon">&#128722;</a>
-
-    </div>
-  </header>
-
+ <!-- NAVBAR -->
+<header class="navbar">
+  <h1 class="navbar__logo">Malin</h1>
+  <nav class="navbar__nav" id="mobileMenu">
+    <ul class="navbar__links">
+      <li><a href="index.html" class="navbar__link">Home</a></li>
+      <li><a href="collection.html" class="navbar__link">Collections</a></li>
+      <li><a href="about.html" class="navbar__link">About</a></li>
+      <li><a href="contact.html" class="navbar__link">Contact</a></li>
+      <li><a href="feedback.html" class="navbar__link">Feedback</a></li>
+    </ul>
+  </nav>
+  <div class="navbar__actions">
+    <a href="cart.html" class="navbar__icon cart-badge" id="cartNavIcon">
+      &#128722;
+      <span class="cart-badge__count" id="cartCount" style="display:none">0</span>
+    </a>
+    <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
   <!-- FEEDBACK FORM SECTION -->
   <section id="feedback" class="feedback-section">
     <div class="feedback-hero">
@@ -145,6 +151,35 @@
 
     <p class="footer__copy">&copy; 2026 MAalin. All Rights Reserved.</p>
   </footer>
+<script>
+  // Hamburger menu toggle
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu   = document.getElementById('mobileMenu');
 
+  hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+
+  // Close menu when a link is clicked
+  document.querySelectorAll('.navbar__link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburgerBtn.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+
+  // Cart badge count
+  function updateBadge() {
+    const cart  = JSON.parse(localStorage.getItem('malin_cart') || '[]');
+    const total = cart.reduce((sum, i) => sum + i.qty, 0);
+    const badge = document.getElementById('cartCount');
+    if (badge) {
+      badge.textContent = total;
+      badge.style.display = total > 0 ? 'flex' : 'none';
+    }
+  }
+  updateBadge();
+</script>
 </body>
 </html>
